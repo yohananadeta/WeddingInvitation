@@ -1,474 +1,275 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Undangan pernikahan Renaldo Defa Pradana dan Yohana Nadeta Desia Chrisma"
-    />
-    <title>Renaldo & Yohana | Undangan Pernikahan</title>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Deta & Edo</title>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-      :root {
-        --blush: #f4e7e2;
-        --rose: #d7a7a0;
-        --rose-strong: #b77a73;
-        --sage: #8ea18a;
-        --sage-dark: #52614b;
-        --ivory: #fffdf9;
-        --text: #4d4a48;
-        --muted: #726d69;
-        --line: rgba(96, 80, 78, 0.18);
-        --shadow: rgba(63, 52, 50, 0.12);
-      }
-
-      * { box-sizing: border-box; }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at top, rgba(244, 231, 226, 0.9), transparent 35%),
-          linear-gradient(180deg, #f7f1ed 0%, #f3efe8 100%);
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      .page {
-        width: min(1100px, calc(100% - 28px));
-        margin: 28px auto;
-        background: rgba(255, 255, 255, 0.54);
-        backdrop-filter: blur(2px);
-        border: 1px solid rgba(126, 112, 108, 0.12);
-        box-shadow: 0 32px 80px var(--shadow);
-      }
-
-      .hero {
-        position: relative;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 48px 18px 36px;
-        background:
-          linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.1)),
-          url('data:image/svg+xml;utf8,<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="900" fill="%23f9f5f1"/><g opacity="0.45" fill="none" stroke="%23d4b1aa" stroke-width="2"><path d="M110 760C200 640 260 540 330 650C400 760 470 610 570 540C660 480 730 620 812 570C890 520 980 350 1090 370C1110 540 1080 700 980 790"/><path d="M70 430C150 320 240 440 290 330C370 180 450 260 560 320C660 380 720 240 875 250C980 260 1040 400 1110 440"/><path d="M170 810C220 700 290 660 360 720C440 790 520 680 610 700C700 720 770 805 860 760C960 710 1020 640 1090 660"/></g></svg>') center/cover no-repeat;
-      }
-
-      .hero-inner {
-        width: min(760px, 100%);
-        text-align: center;
-        padding: 20px 18px 12px;
-      }
-
-      .tagline {
-        margin: 0 0 18px;
-        color: var(--sage-dark);
-        font-size: 0.78rem;
-        letter-spacing: 0.28rem;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(3rem, 6vw, 5.4rem);
-        font-weight: 400;
-        line-height: 0.98;
-        color: var(--sage-dark);
-      }
-
-      .ampersand {
-        display: inline-block;
-        margin: 0 0.18em;
-        color: var(--rose-strong);
-        font-size: 0.8em;
-        font-style: italic;
-      }
-
-      .subtitle {
-        max-width: 620px;
-        margin: 22px auto 0;
-        color: var(--muted);
-        font-size: 1.05rem;
-        line-height: 1.9;
-      }
-
-      .date-badge {
-        display: inline-block;
-        margin-top: 28px;
-        padding: 12px 22px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.55);
-        color: var(--sage-dark);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.72rem;
-        letter-spacing: 0.22rem;
-        text-transform: uppercase;
-      }
-
-      .scroll {
-        display: inline-block;
-        margin-top: 32px;
-        padding: 10px 18px;
-        border-radius: 999px;
-        background: var(--sage-dark);
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.75rem;
-        letter-spacing: 0.18rem;
-        text-transform: uppercase;
-        transition: transform 0.2s ease, filter 0.2s ease;
-      }
-
-      .scroll:hover, .cta:hover {
-        transform: translateY(-1px);
-        filter: brightness(1.04);
-      }
-
-      .content {
-        padding: 10px 18px 70px;
-      }
-
-      .section {
-        width: min(900px, 100%);
-        margin: 0 auto;
-        padding: 70px 0 0;
-      }
-
-      .section-title {
-        margin: 0 0 26px;
-        color: var(--sage-dark);
-        font-size: clamp(1.8rem, 3vw, 2.6rem);
-        font-weight: 400;
-        text-align: center;
-      }
-
-      .section-title + .lead {
-        max-width: 620px;
-        margin: 0 auto 34px;
-        color: var(--muted);
-        font-size: 1.02rem;
-        line-height: 1.9;
-        text-align: center;
-      }
-
-      .countdown {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(120px, 1fr));
-        gap: 18px;
-        margin: 0 auto;
-        max-width: 720px;
-      }
-
-      .countdown-box {
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.6);
-        padding: 22px 14px 18px;
-        text-align: center;
-      }
-
-      .countdown-number {
-        display: block;
-        color: var(--rose-strong);
-        font-size: clamp(2rem, 3vw, 2.8rem);
-        line-height: 1;
-      }
-
-      .countdown-label {
-        display: block;
-        margin-top: 10px;
-        color: var(--sage-dark);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.7rem;
-        letter-spacing: 0.18rem;
-        text-transform: uppercase;
-      }
-
-      .couple {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 28px;
-      }
-
-      .card {
-        padding: 28px 22px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.65);
-        text-align: center;
-      }
-
-      .card .label {
-        margin: 0 0 12px;
-        color: var(--sage-dark);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.72rem;
-        letter-spacing: 0.18rem;
-        text-transform: uppercase;
-      }
-
-      .card h3 {
-        margin: 0;
-        color: var(--rose-strong);
-        font-size: clamp(1.5rem, 2vw, 2rem);
-        font-weight: 400;
-      }
-
-      .card .parents {
-        margin-top: 16px;
-        color: var(--muted);
-        font-size: 1rem;
-        line-height: 1.9;
-      }
-
-      .details {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 26px;
-        align-items: stretch;
-      }
-
-      .detail-box {
-        padding: 26px 22px;
-        border: 1px solid var(--line);
-        background: rgba(255,255,255,0.65);
-      }
-
-      .detail-box h4 {
-        margin: 0 0 14px;
-        color: var(--sage-dark);
-        font-size: 1.25rem;
-        font-weight: 400;
-      }
-
-      .detail-box p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.85;
-        font-size: 1rem;
-      }
-
-      .detail-box strong {
-        color: var(--text);
-      }
-
-      .cta-wrap {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        flex-wrap: wrap;
-        margin-top: 30px;
-      }
-
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 180px;
-        padding: 14px 22px;
-        border: 1px solid var(--sage-dark);
-        background: var(--sage-dark);
-        color: #fff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.75rem;
-        letter-spacing: 0.18rem;
-        text-transform: uppercase;
-        transition: transform 0.2s ease, filter 0.2s ease;
-      }
-
-      .cta.secondary {
-        background: transparent;
-        color: var(--sage-dark);
-      }
-
-      .footer {
-        padding: 28px 18px 48px;
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.9rem;
-        line-height: 1.8;
-      }
-
-      .footer strong {
-        color: var(--sage-dark);
-      }
-
-      @media (max-width: 760px) {
-        .countdown {
-          grid-template-columns: repeat(2, minmax(120px, 1fr));
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .serif-font { font-family: 'Cormorant Garamond', serif; }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
-
-        .couple,
-        .details {
-          grid-template-columns: 1fr;
+        .animate-spin-slow {
+            animation: spin-slow 8s linear infinite;
         }
-      }
-
-      @media (max-width: 480px) {
-        .page {
-          width: min(100% - 12px, 1100px);
-          margin: 12px auto;
-        }
-
-        .hero {
-          min-height: 92vh;
-          padding-top: 36px;
-        }
-
-        .countdown {
-          grid-template-columns: repeat(2, minmax(90px, 1fr));
-          gap: 12px;
-        }
-
-        .cta-wrap {
-          flex-direction: column;
-        }
-
-        .cta {
-          width: 100%;
-        }
-      }
     </style>
-  </head>
-  <body>
-    <div class="page">
-      <header class="hero" id="top">
-        <div class="hero-inner">
-          <p class="tagline">The Wedding of</p>
-          <h1>Renaldo <span class="ampersand">&amp;</span> Yohana</h1>
-          <p class="subtitle">
-            Dengan memohon rahmat dan ridha Tuhan Yang Maha Esa, kami mengundang Bapak/Ibu/Saudara/i
-            untuk hadir serta memberikan doa restu pada pernikahan kami.
-          </p>
-          <div class="date-badge">
-            <time datetime="2027-08-14">14 Agustus 2027</time>
-          </div>
-          <div>
-            <a class="scroll" href="#details">Lihat Detail</a>
-          </div>
+</head>
+<body class="bg-[#FBF9F5] text-[#4A403A] antialiased selection:bg-[#D4A373]/30">
+
+    <!-- AUDIO / BACKGROUND MUSIC (Mulai dari detik ke-7) -->
+    <!-- Menggunakan file audio langsung agar bisa diatur waktunya dari detik ke-7 -->
+    <audio id="bgMusic" loop>
+        <source src="https://p.scdn.co/mp3-preview/4b3deaniwod8552cbwftcg?cid=774b29d4f13844c695f206189c16841d" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <!-- TOMBOL KONTROL MUSIK MELAYANG (FLOATING BUTTON) -->
+    <button id="musicToggle" onclick="toggleMusic()" class="fixed bottom-5 right-5 z-50 bg-[#A3704C] text-white p-3.5 rounded-full shadow-lg flex items-center justify-center hover:bg-[#8C5D3D] transition duration-300 focus:outline-none">
+        <svg id="musicIcon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 animate-spin-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+        </svg>
+    </button>
+
+    <!-- HERO / COVER SECTION -->
+    <header class="relative h-screen flex flex-col items-center justify-center text-center px-6 bg-[#2B2320] text-[#FBF9F5] overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center"></div>
+        <div class="relative z-10 max-w-lg mx-auto space-y-6">
+            <p class="uppercase tracking-[0.3em] text-xs md:text-sm text-[#D4A373] font-medium">The Wedding of</p>
+            <h1 class="serif-font italic text-6xl md:text-8xl tracking-wide text-[#FAEED1]">Deta & Edo</h1>
+            <p class="text-sm tracking-widest text-[#E3DCD2] pt-2">13 AGUSTUS 2027</p>
+            <div class="pt-6">
+                <a href="#main-content" onclick="startMusicOnOpen()" class="inline-block bg-[#A3704C] hover:bg-[#8C5D3D] text-[#FBF9F5] text-xs uppercase tracking-widest font-semibold px-8 py-3.5 rounded-full transition-all duration-300 shadow-md">
+                    Buka Undangan
+                </a>
+            </div>
         </div>
-      </header>
+    </header>
 
-      <main class="content">
-        <section class="section" aria-labelledby="countdown-title">
-          <h2 class="section-title" id="countdown-title">Counting Down</h2>
-          <p class="lead">Kami menantikan kebersamaan Anda pada hari yang sangat istimewa ini.</p>
-          <div class="countdown" aria-label="Countdown to wedding date">
-            <div class="countdown-box">
-              <span class="countdown-number" id="days">00</span>
-              <span class="countdown-label">Hari</span>
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="py-20 px-4 max-w-2xl mx-auto space-y-24">
+
+        <!-- COUPLE SECTION & KUTIPAN (MATIUS 19:6) -->
+        <section class="text-center space-y-10">
+            <div class="space-y-6 max-w-lg mx-auto">
+                <div class="w-16 h-0.5 bg-[#D4A373] mx-auto"></div>
+                <p class="serif-font italic text-lg md:text-xl text-[#6B5B52] leading-relaxed">
+                    "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia." <br>
+                    <span class="text-xs font-sans uppercase tracking-widest text-[#A3704C] mt-2 block">(Matius 19:6)</span>
+                </p>
+                <p class="text-xs text-[#8C7A6B] italic pt-1">
+                    "Kinasih, dados sesarengan lampahing urip. Mugi Gusti maringi berkah lan wilujeng ing sadengah sedya."
+                </p>
+                <div class="w-16 h-0.5 bg-[#D4A373] mx-auto"></div>
             </div>
-            <div class="countdown-box">
-              <span class="countdown-number" id="hours">00</span>
-              <span class="countdown-label">Jam</span>
+
+            <div class="space-y-2 pt-4">
+                <span class="text-xs uppercase tracking-[0.2em] text-[#A3704C] font-semibold">Sang Mempelai</span>
+                <h2 class="serif-font text-4xl text-[#362D28]">Merajut Kasih</h2>
             </div>
-            <div class="countdown-box">
-              <span class="countdown-number" id="minutes">00</span>
-              <span class="countdown-label">Menit</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
+                <!-- Mempelai Wanita -->
+                <div class="space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-[#EBE3D5]">
+                    <div class="w-36 h-36 mx-auto rounded-full overflow-hidden shadow-inner border-2 border-[#D4A373]">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Deta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="serif-font font-bold text-2xl text-[#362D28]">Yohana Nadeta Desia Chrisma</h3>
+                        <p class="text-xs font-medium text-[#A3704C]">Putri dari</p>
+                        <p class="text-xs text-[#6B5B52]">Bpk. Matius Triono Mardi Subagio & Ibu Maria Christina Lehang</p>
+                    </div>
+                </div>
+                <!-- Mempelai Pria -->
+                <div class="space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-[#EBE3D5]">
+                    <div class="w-36 h-36 mx-auto rounded-full overflow-hidden shadow-inner border-2 border-[#D4A373]">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Edo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1">
+                        <h3 class="serif-font font-bold text-2xl text-[#362D28]">Renaldo Defa Pradana</h3>
+                        <p class="text-xs font-medium text-[#A3704C]">Putra dari</p>
+                        <p class="text-xs text-[#6B5B52]">Bpk. Eko Wisnu Widodo & Ibu Monika Astutik</p>
+                    </div>
+                </div>
             </div>
-            <div class="countdown-box">
-              <span class="countdown-number" id="seconds">00</span>
-              <span class="countdown-label">Detik</span>
-            </div>
-          </div>
         </section>
 
-        <section class="section" aria-labelledby="couple-title">
-          <h2 class="section-title" id="couple-title">Mempelai</h2>
-          <div class="couple">
-            <article class="card">
-              <p class="label">Mempelai Pria</p>
-              <h3>Renaldo Defa Pradana</h3>
-              <div class="parents">
-                Putra dari:<br />
-                <strong>Eko Wisnu Widodo</strong> &amp; <strong>Monika Astutik</strong>
-              </div>
-            </article>
-
-            <article class="card">
-              <p class="label">Mempelai Wanita</p>
-              <h3>Yohana Nadeta Desia Chrisma</h3>
-              <div class="parents">
-                Putri dari:<br />
-                <strong>Matius Triono Mardi Subagio</strong> &amp; <strong>Maria Christina Lehang</strong>
-              </div>
-            </article>
-          </div>
+        <!-- COUNTDOWN TIMER -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-[#EBE3D5] text-center">
+            <h3 class="serif-font text-2xl font-bold mb-6 text-[#362D28]">Menuju Hari Bahagia</h3>
+            <div id="countdown" class="grid grid-cols-4 gap-4 max-w-md mx-auto">
+                <div class="bg-[#FBF9F5] border border-[#EBE3D5] p-3 rounded-xl"><span id="days" class="block text-2xl font-bold text-[#A3704C]">00</span><span class="text-xs text-[#6B5B52]">Hari</span></div>
+                <div class="bg-[#FBF9F5] border border-[#EBE3D5] p-3 rounded-xl"><span id="hours" class="block text-2xl font-bold text-[#A3704C]">00</span><span class="text-xs text-[#6B5B52]">Jam</span></div>
+                <div class="bg-[#FBF9F5] border border-[#EBE3D5] p-3 rounded-xl"><span id="minutes" class="block text-2xl font-bold text-[#A3704C]">00</span><span class="text-xs text-[#6B5B52]">Menit</span></div>
+                <div class="bg-[#FBF9F5] border border-[#EBE3D5] p-3 rounded-xl"><span id="seconds" class="block text-2xl font-bold text-[#A3704C]">00</span><span class="text-xs text-[#6B5B52]">Detik</span></div>
+            </div>
         </section>
 
-        <section class="section" id="details" aria-labelledby="details-title">
-          <h2 class="section-title" id="details-title">Detail Acara</h2>
-          <div class="details">
-            <div class="detail-box">
-              <h4>Waktu</h4>
-              <p>
-                <strong>Sabtu, 14 Agustus 2027</strong><br />
-                Pukul 10.00 WIB s.d. selesai
-              </p>
+        <!-- EVENT DETAILS (PEMBERKATAN ONLY) -->
+        <section class="space-y-8 text-center max-w-lg mx-auto">
+            <div class="space-y-2">
+                <span class="text-xs uppercase tracking-[0.2em] text-[#A3704C] font-semibold">Waktu & Tempat</span>
+                <h2 class="serif-font text-4xl text-[#362D28]">Pemberkatan Nikah</h2>
             </div>
-            <div class="detail-box">
-              <h4>Lokasi</h4>
-              <p>
-                <strong>Gereja Katolik Ratu Pencinta Damai</strong><br />
-                Mohon hadir tepat waktu untuk merayakan kebahagiaan kami.
-              </p>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-[#EBE3D5] space-y-4">
+                <div class="space-y-3">
+                    <h3 class="serif-font text-2xl font-bold text-[#362D28]">Kamis, 13 Agustus 2027</h3>
+                    <p class="text-sm text-[#6B5B52]">Pukul 09.00 WIB - Selesai</p>
+                    <p class="text-xs text-[#8C7A6B] leading-relaxed font-medium">Gereja Katolik Ratu Pencinta Damai</p>
+                </div>
+                <div class="pt-2">
+                    <a href="https://maps.app.goo.gl/UpFnr4Co9mnDUW4t9" target="_blank" class="inline-block w-full bg-[#FBF9F5] hover:bg-[#EBE3D5] text-[#4A403A] border border-[#D4A373]/40 text-xs font-semibold py-3 rounded-xl transition">
+                        Lihat Lokasi di Google Maps
+                    </a>
+                </div>
             </div>
-          </div>
-
-          <div class="cta-wrap">
-            <a class="cta" href="https://maps.google.com/?q=Gereja+Katolik+Ratu+Pencinta+Damai" target="_blank" rel="noreferrer">Buka Lokasi</a>
-            <a class="cta secondary" href="#top">Kembali ke Atas</a>
-          </div>
         </section>
-      </main>
 
-      <footer class="footer">
-        <div>
-          <strong>Terima kasih</strong> atas doa dan restu yang telah Anda berikan.<br />
-          Kami menantikan kehadiran Anda dalam momen bahagia kami.
-        </div>
-      </footer>
-    </div>
+        <!-- DRESSCODE SECTION -->
+        <section class="bg-[#F4EFE6] p-8 rounded-2xl border border-[#EBE3D5] text-center space-y-4">
+            <span class="text-xs uppercase tracking-[0.2em] text-[#A3704C] font-semibold">Dresscode & Tata Tertib</span>
+            <h3 class="serif-font text-3xl text-[#362D28]">Busana Tamu Etnik Modern</h3>
+            <p class="text-xs md:text-sm text-[#6B5B52] max-w-md mx-auto leading-relaxed">
+                Kami menyarankan tamu undangan mengenakan busana bernuansa *earth-tone* (Cokelat tanah, Sage green, Krem, atau Espresso). Sentuhan batik/tenun sangat dipersilakan.
+            </p>
+        </section>
 
+        <!-- RSVP FORM (TERHUBUNG KE FORMSPREE) -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-[#EBE3D5] space-y-6">
+            <div class="text-center space-y-1">
+                <span class="text-xs uppercase tracking-[0.2em] text-[#A3704C] font-semibold">Konfirmasi</span>
+                <h3 class="serif-font text-3xl text-[#362D28]">RSVP</h3>
+                <p class="text-xs text-[#6B5B52]">Mohon isi form di bawah untuk konfirmasi kehadiran Anda.</p>
+            </div>
+            
+            <form action="https://formspree.io/f/myewgpzw" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-[#6B5B52] mb-1">Nama Lengkap</label>
+                    <input type="text" name="nama_tamu" required placeholder="Masukkan nama Anda" class="w-full px-4 py-2.5 bg-[#FBF9F5] border border-[#EBE3D5] rounded-xl text-sm focus:ring-2 focus:ring-[#A3704C] focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-[#6B5B52] mb-1">Status Kehadiran</label>
+                    <select name="status_kehadiran" class="w-full px-4 py-2.5 bg-[#FBF9F5] border border-[#EBE3D5] rounded-xl text-sm focus:ring-2 focus:ring-[#A3704C] focus:outline-none">
+                        <option value="Hadir">Hadir</option>
+                        <option value="Berhalangan Hadir">Berhalangan Hadir</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-[#A3704C] hover:bg-[#8C5D3D] text-white font-medium py-3 rounded-xl text-sm transition tracking-wider uppercase shadow-md">
+                    Kirim Konfirmasi
+                </button>
+            </form>
+        </section>
+
+        <!-- WISHES / UCAPAN TAMU -->
+        <section class="bg-white p-8 rounded-2xl shadow-sm border border-[#EBE3D5] space-y-6">
+            <div class="text-center space-y-1">
+                <h3 class="serif-font text-3xl text-[#362D28]">Ucapan & Doa</h3>
+                <p class="text-xs text-[#6B5B52]">Berikan ucapan terbaik untuk kedua mempelai.</p>
+            </div>
+            <form id="wishForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-[#6B5B52] mb-1">Nama</label>
+                    <input type="text" id="wishName" required class="w-full px-4 py-2.5 bg-[#FBF9F5] border border-[#EBE3D5] rounded-xl text-sm focus:ring-2 focus:ring-[#A3704C] focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-[#6B5B52] mb-1">Pesan / Doa</label>
+                    <textarea id="wishMessage" rows="3" required class="w-full px-4 py-2.5 bg-[#FBF9F5] border border-[#EBE3D5] rounded-xl text-sm focus:ring-2 focus:ring-[#A3704C] focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#362D28] hover:bg-[#2B2320] text-white font-medium py-3 rounded-xl text-sm transition tracking-wider uppercase">
+                    Kirim Ucapan
+                </button>
+            </form>
+            <div id="wishesList" class="space-y-3 pt-4 border-t border-[#EBE3D5] max-h-60 overflow-y-auto">
+                <div class="p-4 bg-[#FBF9F5] rounded-xl border border-[#EBE3D5] space-y-1">
+                    <span class="font-bold text-sm text-[#362D28]">Edo & Deta</span>
+                    <p class="text-xs text-[#6B5B52]">Selamat menempuh hidup baru! Semoga lancar sampai hari H ya!</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-xs bg-[#2B2320] text-[#E3DCD2]">
+        <p class="serif-font tracking-widest text-sm mb-1">Deta & Edo</p>
+        <p class="text-[11px] opacity-70">&copy; 2027 Deta & Edo Wedding. Made with love.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-      const weddingDate = new Date('2027-08-14T10:00:00+07:00');
+        // 1. Logika Musik (Mulai dari detik ke-7 saat tombol Buka Undangan diklik)
+        const music = document.getElementById("bgMusic");
+        const musicIcon = document.getElementById("musicIcon");
+        let isPlaying = false;
 
-      function updateCountdown() {
-        const now = new Date();
-        const difference = weddingDate - now;
-
-        if (difference <= 0) {
-          document.getElementById('days').textContent = '00';
-          document.getElementById('hours').textContent = '00';
-          document.getElementById('minutes').textContent = '00';
-          document.getElementById('seconds').textContent = '00';
-          return;
+        function startMusicOnOpen() {
+            music.currentTime = 7; // Mulai dari detik ke-7 sesuai permintaan
+            music.play().then(() => {
+                isPlaying = true;
+                musicIcon.classList.add("animate-spin-slow");
+            }).catch(error => {
+                console.log("Autoplay dicegah oleh browser:", error);
+            });
         }
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / (1000 * 60)) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+                isPlaying = false;
+                musicIcon.classList.remove("animate-spin-slow");
+            } else {
+                music.play();
+                isPlaying = true;
+                musicIcon.classList.add("animate-spin-slow");
+            }
+        }
 
-        document.getElementById('days').textContent = String(days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-      }
+        // 2. Countdown Timer
+        const targetDate = new Date("2027-08-13T09:00:00").getTime();
 
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "<p class='col-span-4 text-[#A3704C] font-bold'>Hari Bahagia Telah Tiba!</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // 3. Wishes Form Handler (Interaktif Lokal)
+        document.getElementById("wishForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const name = document.getElementById("wishName").value;
+            const message = document.getElementById("wishMessage").value;
+            
+            const list = document.getElementById("wishesList");
+            const newWish = document.createElement("div");
+            newWish.className = "p-4 bg-[#FBF9F5] rounded-xl border border-[#EBE3D5] space-y-1";
+            newWish.innerHTML = `<span class="font-bold text-sm text-[#362D28]">${name}</span><p class="text-xs text-[#6B5B52]">${message}</p>`;
+            
+            list.prepend(newWish);
+            this.reset();
+        });
     </script>
-  </body>
+</body>
 </html>
